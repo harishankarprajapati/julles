@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-site="siteName"></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- owl carousel 2 effects animation- -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" rel="stylesheet" />
+
+  <!-- Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Archivo:ital,wght@0,100..900;1,100..900&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fredoka:wght@300..700&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=League+Spartan:wght@100..900&family=Manrope:wght@200..800&family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mr+Dafoe&family=Onest:wght@100..900&family=Oswald:wght@200..700&family=Oxanium:wght@200..800&family=PT+Sans+Caption:wght@400;700&family=Parisienne&family=Phetsarath:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&family=Racing+Sans+One&family=Readex+Pro:wght@160..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sacramento&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&display=swap"
+    rel="stylesheet">
+
+  <!-- Fredoka -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Archivo:ital,wght@0,100..900;1,100..900&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fredoka:wght@300..700&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=League+Spartan:wght@100..900&family=Manrope:wght@200..800&family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Oxanium:wght@200..800&family=PT+Sans+Caption:wght@400;700&family=Parisienne&family=Phetsarath:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&family=Racing+Sans+One&family=Readex+Pro:wght@160..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sacramento&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&display=swap"
+    rel="stylesheet">
+
+  <!-- Onest  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Archivo:ital,wght@0,100..900;1,100..900&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fredoka:wght@300..700&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=League+Spartan:wght@100..900&family=Manrope:wght@200..800&family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mr+Dafoe&family=Onest:wght@100..900&family=Oswald:wght@200..700&family=Oxanium:wght@200..800&family=PT+Sans+Caption:wght@400;700&family=Parisienne&family=Phetsarath:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&family=Racing+Sans+One&family=Readex+Pro:wght@160..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sacramento&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&display=swap"
+    rel="stylesheet">
+
+
+  <link rel="icon" href="images/fav-icon.png">
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+  <!-- Loader -->
+  <!-- <div id="pageloader">
+    <div class="loader-box">
+      <img src="images/dogloader.gif" alt="Loading..." class="loader-gif">
+    </div>
+  </div> -->
+
+  <div class="container-fluid herosecbg">
+
+    <!-- header -->
+    <div include-html="header.html" id="header-file"></div>
+
+    <!-- HERO SECTION (NO SLIDER) -->
+    <section class="heroslider1" style="background-image:url(../images/heroslider.png);">
+
+      <div class="container">
+        <div class="row m-0 align-items-center">
+
+          <div class="col-md-12">
+            <div class="secallabhotextbg">
+              <h2>About us</h2>
+              <p><span>Home</span> / <span class="secanotcolorbg">About Us</span></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+  </div>
+
+  <!-- About -->
+  <div class="container-fluid sechoabhotbg">
+    <div class="container">
+      <div class="row m-0 secrdfbhg">
+        <div class="col-md-5 about-img-wrap">
+
+          <img class="img-fluid secabimgrod" src="images/aboutherimg.png" alt="">
+
+          <div class="video-badge">
+            <div class="video-thumb">
+              <iframe src="https://www.youtube.com/embed/NyOIdaHVL-M?si=-_kf86Vv9_VHWxZS"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
+            </div>
+
+            <div class="video-text">
+              <h4>We Have 2500+</h4>
+              <p>Student Training</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-7 secabbtg">
+          <div class="sectexttherbg">
+            <h5><i class="bi bi-dot"></i> About Us</h5>
+            <h2>Creating strong bodies and
+              even stronger minds</h2>
+          </div>
+          <div class="row m-0 secbgmisbg">
+            <div class="col-md-6">
+              <div class="secmisbg">
+                <svg class="my-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+                  <path
+                    d="M35.1844 3.75476C35.4773 3.462 35.9521 3.46191 36.245 3.75476C36.5377 4.04762 36.5377 4.52245 36.245 4.81531L26.5018 14.5585C26.209 14.8511 25.7341 14.8511 25.4413 14.5585C25.1484 14.2656 25.1485 13.7908 25.4413 13.4979L35.1844 3.75476Z"
+                    fill="currentColor" />
+                  <path
+                    d="M3.75531 3.75483C4.04821 3.46193 4.52297 3.46193 4.81586 3.75483L14.559 13.498C14.8516 13.7909 14.8518 14.2657 14.559 14.5585C14.2662 14.8513 13.7914 14.8511 13.4985 14.5585L3.75531 4.81537C3.46242 4.52248 3.46242 4.04772 3.75531 3.75483Z"
+                    fill="currentColor" />
+                  <path
+                    d="M13.4989 25.4423C13.7918 25.1495 14.2666 25.1494 14.5594 25.4423C14.8522 25.7351 14.8522 26.2099 14.5594 26.5028L4.81628 36.246C4.52342 36.5387 4.0486 36.5387 3.75574 36.246C3.46289 35.9531 3.46298 35.4783 3.75574 35.1854L13.4989 25.4423Z"
+                    fill="currentColor" />
+                  <path
+                    d="M25.4413 25.4423C25.7342 25.1494 26.209 25.1494 26.5019 25.4423L36.2451 35.1855C36.5377 35.4784 36.5379 35.9532 36.2451 36.246C35.9523 36.5388 35.4774 36.5387 35.1845 36.246L25.4413 26.5029C25.1485 26.21 25.1485 25.7352 25.4413 25.4423Z"
+                    fill="currentColor" />
+                  <path
+                    d="M37.8213 20.001C37.8212 10.1585 29.8424 2.17969 20 2.17969C10.1576 2.17975 2.17878 10.1586 2.17871 20.001C2.17871 29.8434 10.1576 37.8222 20 37.8223C29.8425 37.8223 37.8213 29.8435 37.8213 20.001ZM39.3213 20.001C39.3213 30.6719 30.6709 39.3223 20 39.3223C9.32914 39.3222 0.678711 30.6719 0.678711 20.001C0.678776 9.33016 9.32918 0.679751 20 0.679688C30.6709 0.679688 39.3212 9.33012 39.3213 20.001Z"
+                    fill="currentColor" />
+                  <path
+                    d="M27.6787 20.0029C27.6787 15.7622 24.2407 12.3243 20 12.3242C15.7592 12.3242 12.3213 15.7621 12.3213 20.0029C12.3213 24.2437 15.7593 27.6816 20 27.6816C24.2407 27.6816 27.6787 24.2436 27.6787 20.0029ZM29.1787 20.0029C29.1787 25.0721 25.0691 29.1816 20 29.1816C14.9308 29.1816 10.8213 25.0721 10.8213 20.0029C10.8213 14.9337 14.9308 10.8242 20 10.8242C25.0692 10.8243 29.1787 14.9338 29.1787 20.0029Z"
+                    fill="currentColor" />
+                </svg>
+                <h3>Our Mission</h3>
+                <p>Taekwondo sikhwo Betiyon ko sashkt and nidar banawo</p>
+              </div>
+
+            </div>
+            <div class="col-md-6">
+              <div class="secmisbg">
+                <svg class="my-svg icon-md text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+                  <path
+                    d="M30.4201 3.64844C31.0172 3.66484 31.6027 3.82212 32.1281 4.10645C32.6489 4.38836 33.0964 4.7881 33.4357 5.27344L38.6369 12.4736L38.6408 12.4795C39.1233 13.1614 39.364 13.9849 39.3253 14.8193C39.2864 15.6539 38.9697 16.4528 38.4259 17.0869L38.423 17.0898L22.8234 35.0615C22.4901 35.4811 22.0678 35.8218 21.5861 36.0576C21.0923 36.2994 20.5499 36.4257 20.0001 36.4258C19.4502 36.4258 18.9071 36.2995 18.4132 36.0576C17.9315 35.8217 17.5094 35.4805 17.1759 35.0605L1.57632 17.0898L1.57339 17.0869C1.02959 16.4527 0.712891 15.6549 0.673976 14.8203C0.635153 13.9857 0.876024 13.1615 1.35855 12.4795L1.36343 12.4736L6.56362 5.27344C6.90287 4.78812 7.35042 4.3884 7.87124 4.10645C8.39664 3.82211 8.98208 3.66484 9.57925 3.64844H30.4201Z"
+                    fill="currentColor" />
+                  <path
+                    d="M17.8844 3.96372C18.1091 3.61618 18.5727 3.51663 18.9205 3.74106C19.2685 3.96571 19.3688 4.43017 19.1442 4.77817L12.3854 15.2459L20.693 35.3124C20.8514 35.6951 20.6694 36.1344 20.2867 36.2928C19.9041 36.4512 19.4658 36.269 19.3072 35.8866L10.8492 15.4579C10.7551 15.2304 10.7792 14.9713 10.9127 14.7645L17.8844 3.96372Z"
+                    fill="currentColor" />
+                  <path
+                    d="M21.1661 3.74017C21.5145 3.51628 21.9783 3.61737 22.2022 3.96575L29.1456 14.7656C29.2787 14.9728 29.3019 15.2326 29.2071 15.4599L20.6925 35.8876C20.5332 36.2698 20.0942 36.451 19.712 36.2919C19.3298 36.1326 19.1486 35.6937 19.3077 35.3115L27.67 15.2451L20.9405 4.7763C20.7167 4.4279 20.8177 3.9641 21.1661 3.74017Z"
+                    fill="currentColor" />
+                  <path
+                    d="M38.5142 14.4219C38.9284 14.4219 39.2642 14.7577 39.2642 15.1719C39.2642 15.5861 38.9284 15.9219 38.5142 15.9219H1.48584C1.07163 15.9219 0.73584 15.5861 0.73584 15.1719C0.73584 14.7577 1.07163 14.4219 1.48584 14.4219H38.5142Z"
+                    fill="currentColor" />
+                </svg>
+                <h3>Our Vision</h3>
+                <p>We train students with world class infrastructure and want to make Olympians</p>
+              </div>
+            </div>
+          </div>
+          <div class="secalbgabut">
+
+            <a href="#" class="learn-btn">
+              Contact Us
+              <span><i class="bi bi-arrow-up-right"></i></span>
+            </a>
+
+            <div class="call-box">
+              <div class="call-icon"><i class="bi bi-telephone"></i></div>
+              <div class="call-text">
+                <a href="tel:+91 9470890200">
+                  <small>Need Help?</small>
+                  <b>+91 9470890200</b>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials -->
+  <div class="container-fluid ">
+    <div class="sectestmonbg">
+      <div class="container">
+        <div class="sectexttherbg secworbgtext pt-5 text-center texthidbg">
+          <h5 class="text-center"><i class="bi bi-dot"></i> Core Feature</h5>
+          <h2>Real experiences from our dojo
+            family community</h2>
+        </div>
+
+        <div class="owl-carousel testimonialsslider owl-theme">
+
+          <!-- ITEM 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <img src="https://i.pravatar.cc/100?img=1" class="user-img">
+              <div>
+                <h5>Savannah Nguyen</h5>
+                <span>Adult Learner</span>
+              </div>
+              <div class="quote-icon">
+                <p>❝</p>
+              </div>
+            </div>
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+              My daughter joined the dojo a few ago, and the
+              change has been amazing. She has become more focused, confident, and respectful at home and in school. The
+              instructors attentive, supportive, and truly care about each student's progress.
+            </p>
+          </div>
+
+          <!-- ITEM 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <img src="https://i.pravatar.cc/100?img=2" class="user-img">
+              <div>
+                <h5>Alexander Simmons</h5>
+                <span>Adult Learner</span>
+              </div>
+              <div class="quote-icon">
+                <p>❝</p>
+              </div>
+            </div>
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+              My daughter joined the dojo a few ago, and the
+              change has been amazing. She has become more focused, confident, and respectful at home and in school. The
+              instructors attentive, supportive, and truly care about each student's progress.
+            </p>
+          </div>
+
+          <!-- ITEM 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <img src="https://i.pravatar.cc/100?img=3" class="user-img">
+              <div>
+                <h5>Sofia</h5>
+                <span>Adult Learner</span>
+              </div>
+              <div class="quote-icon">
+                <p>❝</p>
+              </div>
+            </div>
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+              My daughter joined the dojo a few ago, and the
+              change has been amazing. She has become more focused, confident, and respectful at home and in school. The
+              instructors attentive, supportive, and truly care about each student's progress.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="secexpbg">
+          <div class="rating-box">
+            <p class="top-text">
+              Explore All Training Programs Designed for Every Student –
+              <a href="taekewndoo-sessions.html">View All Sessions</a>
+            </p>
+
+            <div class="rating-row m-0">
+              <span class="rating-num">4.9/5</span>
+
+              <div class="stars">
+                ★★★★★
+              </div>
+
+              <span class="review-text">Our 150 Review</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- book -->
+  <div class="container secbookbg">
+    <div class="row m-0 align-items-center">
+
+      <!-- LEFT FORM -->
+      <div class="col-md-6" id="bookappoment">
+        <div class="book-form-box">
+          <h2>Book an Appointment</h2>
+
+          <form>
+            <div class="row m-0 g-3">
+              <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Enter Full Name *" required>
+              </div>
+              <div class="col-md-6">
+                <input type="email" class="form-control" placeholder="Enter Email Address *" required>
+              </div>
+
+              <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Enter Phone Number *" required>
+              </div>
+
+              <div class="col-md-6">
+                <select class="form-control" required>
+                  <option>Select a Program</option>
+                  <option>Karate</option>
+                  <option>Self Defense</option>
+                  <option>Fitness Training</option>
+                </select>
+              </div>
+
+              <div class="col-12">
+                <textarea class="form-control" rows="4" placeholder="Any Additional Message..."></textarea>
+              </div>
+
+              <div class="col-12">
+                <button class="btn-book">Make An Appointment <i class="bi bi-arrow-up-right"></i></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+      <!-- RIGHT INFO EXACT DESIGN -->
+      <div class="col-md-6 ">
+        <div class="sectexttherbg book-info ">
+          <h5><i class="bi bi-dot"></i> Schedule A Appointment</h5>
+          <h2>Book your class
+            appointment now</h2>
+          <p>Take the first step toward building confidence, strength, and discipline.
+            Schedule your training session at a time that works best for you</p>
+
+        </div>
+
+        <div class="book-info">
+          <hr>
+          <div class="info-grid">
+
+            <div class="info-box">
+              <div class="icon"><i class="bi bi-telephone"></i></div>
+              <div>
+                <h5>Contact Us</h5>
+                <span>+91 123 456 789</span>
+              </div>
+            </div>
+
+            <div class="info-box">
+              <div class="icon"><i class="bi bi-envelope"></i></div>
+              <div>
+                <h5>E-mail Address</h5>
+                <span>info@domainname.com</span>
+              </div>
+            </div>
+
+            <div class="info-box">
+              <div class="icon"><i class="bi bi-geo-alt"></i></div>
+              <div>
+                <h5>Location</h5>
+                <span>45 Martial Way Street, City</span>
+              </div>
+            </div>
+
+            <div class="info-box">
+              <div class="icon"><i class="bi bi-clock"></i></div>
+              <div>
+                <h5>Hours</h5>
+                <span>Mon-Sat: 8 AM - 9 PM</span><br>
+                <span>Sun: Closed</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <!-- footer -->
+  <div include-html="footer.html" id="footer-file"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/owl.carousel.min.js" type="text/javascript"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/settings.js"></script>
+  <script>
+
+    $('.owl-carousel.testimonialsslider').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 3
+        },
+        1000: {
+          items: 3
+        }
+      }
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+    function playVideo() {
+      document.getElementById("videoFrame").src =
+        "https://www.youtube.com/embed/NyOIdaHVL-M?si=j5m7Usl3xEkCBJQs";
+    }
+    function stopVideo() {
+      document.getElementById("videoFrame").src = "";
+    }
+  </script>
+  <script>
+    let count = 0;
+    let target = 500;
+    let speed = 10;
+
+    let counter = setInterval(() => {
+      count++;
+      document.getElementById("studentCount").innerHTML = count;
+
+      if (count >= target) {
+        clearInterval(counter);
+      }
+    }, speed);
+  </script>
+
+  <script>
+    // loder-start
+    window.addEventListener("load", function () {
+      document.getElementById("pageloader").style.display = "none";
+    });
+    // loder-end
+
+  </script>
+
+
+
+</body>
+
+</html>
