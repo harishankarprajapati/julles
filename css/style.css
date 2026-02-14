@@ -330,7 +330,7 @@ body.loaded #pageloader {
   position: absolute;
   height: 70px;          /* image height */
   width: auto;
-  border-radius:  10ytjpx;
+  border-radius:  10px;
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.85);
   animation: methodFade 2s ease forwards;
