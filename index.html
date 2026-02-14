@@ -38,6 +38,13 @@
 </head>
 
 <body>
+  <!-- Loader -->
+  <div id="pageloader">
+    <div class="loader-box">
+      <img src="images/gymloder.png" alt="Loading..." class="loader-gif">
+      <h5 class="text-center">Loading...</h5>
+    </div>
+  </div>
   <!-- header -->
   <div class="container-fluid herosecbg">
     <div include-html="header.html" id="header-file"></div>
@@ -62,14 +69,24 @@
     </div>
   </div>
 
-  <!--  The Julles Method  -->
+<!--  The Julles Method  -->
+<div class="container-fluid julles-method-wrap">
+
+  <!-- Floating images container -->
+  <div class="method-float-images"></div>
+
   <div class="container secjunbg">
     <div class="secbgabut">
-      <p>The Julles Method is a transformative approach that will leave
+      <p>
+        The Julles Method is a transformative approach that will leave
         you <span> stronger, longer and leaner, </span> while relieving physical and
-        mental tension so you feel your most confident. <span>For Every Body.</span></p>
+        mental tension so you feel your most confident.
+        <span>For Every Body.</span>
+      </p>
     </div>
   </div>
+
+</div>
 
   <!-- Choose your perfect plan -->
   <div class="container-fluid sechoosebg">
@@ -387,6 +404,7 @@
       </div>
     </div>
 
+
   </div>
 
   <!-- footer -->
@@ -446,7 +464,7 @@
       document.getElementById("scrollProgress").style.width = scrolled + "%";
     };
   </script>
-  
+
   <script>
     // loder-start
     window.addEventListener("load", function () {
@@ -456,6 +474,52 @@
 
   </script>
 
+
+<!-- mouse hover imge -->
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const wrap = document.querySelector(".julles-method-wrap");
+  const container = document.querySelector(".method-float-images");
+
+  if (!wrap || !container) return;
+
+  const images = [
+    "images/plan-img1.png",
+    "images/plan-img2.png",
+    "images/plan-img3.png"
+  ];
+
+  let index = 0;
+  let lastTime = 0;
+
+  wrap.addEventListener("mousemove", (e) => {
+
+    const now = Date.now();
+    if (now - lastTime < 120) return; // control density
+    lastTime = now;
+
+    const rect = wrap.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const img = document.createElement("img");
+    img.src = images[index];
+    img.className = "method-trail-img";
+
+    img.style.left = x + "px";
+    img.style.top  = y + "px";
+    img.style.rotate = (Math.random() * 14 - 7) + "deg";
+
+    container.appendChild(img);
+
+    index = (index + 1) % images.length;
+
+    setTimeout(() => img.remove(), 2000);
+  });
+
+});
+</script>
 
 
 </body>
