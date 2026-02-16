@@ -56,75 +56,86 @@
   <!-- allherder -->
   <div class="container-fluid secallhedbg">
     <div class="container sechedtext">
-      <h2>Blog</h2>
+      <h2>Terms of Service</h2>
     </div>
   </div>
+<div class="container my-5 refund-policy">
+  <div class="row">
+    <div class="col-lg-12">
 
-  <!-- Choose your perfect plan -->
-  <div class="container-fluid sechoosebg">
+      <p>
+        Welcome to <strong>Julles</strong>. By accessing our website or using our services,
+        you agree to comply with and be bound by the following Terms of Service.
+        Please read these terms carefully before using our services.
+      </p>
 
-    <div class="row m-0 pt-4">
-      <div class="col-md-4">
-        <div class="pricing-card">
-          <img src="images/plan-img1.png" alt="Session" class="pricing-img">
+      <h5>1. Services</h5>
+      <p>
+        Julles provides Pilates and wellness-related services. All services are subject
+        to availability and may be modified or discontinued at any time without notice.
+      </p>
 
-          <div class="pricing-body text-center">
-            <h3 class="plan">All-Access</h3>
-            <h6><i class="bi bi-calendar"></i> 06/02/2026</h6>
+      <h5>2. Membership & Bookings</h5>
+      <p>
+        Memberships and class bookings must be made in advance. All payments are non-refundable
+        and non-transferable unless stated otherwise in writing.
+      </p>
 
-            <p class="desc">
-              Your unlimited pass to every jules On-Demand workout—Reformer, Chair,
-              Tower, Barrels, and more—whenever you're ready to move!
-            </p>
+      <h5>3. User Responsibilities</h5>
+      <p>
+        Clients must provide accurate personal information and follow studio rules,
+        safety guidelines, and instructor instructions during sessions.
+      </p>
 
+      <h5>4. Health & Safety</h5>
+      <p>
+        By participating in classes, you confirm that you are medically fit to engage in
+        physical activity. Julles is not responsible for injuries resulting from failure
+        to disclose medical conditions.
+      </p>
 
+      <h5>5. Studio Rules</h5>
+      <p>
+        Respectful behavior is required at all times. Julles reserves the right to refuse
+        service or terminate memberships in cases of misconduct.
+      </p>
 
-          </div>
-          <a href="blog-detail.html" class="btn book-btn2">READ MORE</a>
-        </div>
+      <h5>6. Intellectual Property</h5>
+      <p>
+        All content on this website, including logos, text, images, and branding,
+        is the property of Julles and may not be copied or used without permission.
+      </p>
 
-      </div>
-      <div class="col-md-4">
-        <div class="pricing-card">
-          <img src="images/plan-img2.png" alt="Session" class="pricing-img">
+      <h5>7. Limitation of Liability</h5>
+      <p>
+        Julles shall not be liable for any direct, indirect, or incidental damages arising
+        from the use of our services or website.
+      </p>
 
-          <div class="pricing-body text-center">
-            <h3 class="plan">Reformer</h3>
-            <h6><i class="bi bi-calendar"></i> 06/02/2026</h6>
+      <h5>8. Changes to Terms</h5>
+      <p>
+        Julles reserves the right to update these Terms of Service at any time.
+        Continued use of our services constitutes acceptance of the revised terms.
+      </p>
 
-            <p class="desc">
-              Your unlimited pass to every jules On-Demand workout—Reformer, Chair,
-              Tower, Barrels, and more—whenever you're ready to move!
-            </p>
+      <h5>9. Governing Law</h5>
+      <p>
+        These Terms of Service shall be governed by and interpreted in accordance
+        with the laws of the State of Kuwait.
+      </p>
 
+      <h5>10. Contact Information</h5>
+      <p>
+        For questions regarding these Terms of Service, please contact us
+        through our official communication channels.
+      </p>
 
-          </div>
-          <a href="#" class="btn book-btn2">READ MORE</a>
-        </div>
-
-      </div>
-      <div class="col-md-4">
-        <div class="pricing-card">
-          <img src="images/plan-img3.png" alt="Session" class="pricing-img">
-
-          <div class="pricing-body text-center">
-            <h3 class="plan">No Equipment</h3>
-            <h6><i class="bi bi-calendar"></i> 06/02/2026</h6>
-            <p class="desc">
-              Your unlimited pass to every jules On-Demand workout—Reformer, Chair,
-              Tower, Barrels, and more—whenever you're ready to move!
-            </p>
-
-
-          </div>
-          <a href="#" class="btn book-btn2">READ MORE</a>
-        </div>
-
-      </div>
     </div>
   </div>
+</div>
 
 
+  
 
   <!-- footer -->
   <div include-html="footer.html" id="footer-file"></div>
@@ -142,6 +153,21 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/settings.js"></script>
   
+  <script>
+    let count = 0;
+    let target = 500;
+    let speed = 10;
+
+    let counter = setInterval(() => {
+      count++;
+      document.getElementById("studentCount").innerHTML = count;
+
+      if (count >= target) {
+        clearInterval(counter);
+      }
+    }, speed);
+  </script>
+
   <script>
     // loder-start
     window.addEventListener("load", function () {

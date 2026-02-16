@@ -230,4 +230,12 @@
   .secfoot3 h6 {
     padding-top: 30px;
   }
+  .secmobilehibg , .sechidmob{
+    display: none;
+  }
+  .secdasjtoh{
+  display: block;
 }
+}
+
+

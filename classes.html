@@ -56,75 +56,71 @@
   <!-- allherder -->
   <div class="container-fluid secallhedbg">
     <div class="container sechedtext">
-      <h2>Blog</h2>
+      <h2>Classes</h2>
     </div>
   </div>
 
-  <!-- Choose your perfect plan -->
-  <div class="container-fluid sechoosebg">
+  <!-- Our Classes -->
+  <div class="container secourclassesbg">
+    <ul class="nav classes-tabs" id="classTabs" role="tablist">
+      <li class="nav-item">
+        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#essentials">Essentials</button>
+      </li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#body">Body</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#goals">Goals</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#barre">Pilates x
+          Barre</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#hiit">Pilates x
+          HIIT</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#technique">Technique</button>
+      </li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#stretch">Pilates x
+          Stretch</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#calm">Calm</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#postnatal">Postnatal</button>
+      </li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#reformer">Reformer</button>
+      </li>
+    </ul>
 
-    <div class="row m-0 pt-4">
-      <div class="col-md-4">
-        <div class="pricing-card">
-          <img src="images/plan-img1.png" alt="Session" class="pricing-img">
+    <!-- TAB CONTENT -->
+    <div class="tab-content mt-4">
 
-          <div class="pricing-body text-center">
-            <h3 class="plan">All-Access</h3>
-            <h6><i class="bi bi-calendar"></i> 06/02/2026</h6>
-
-            <p class="desc">
-              Your unlimited pass to every jules On-Demand workout—Reformer, Chair,
-              Tower, Barrels, and more—whenever you're ready to move!
-            </p>
-
-
-
+      <!-- TAB PANE -->
+      <div class="tab-pane fade show active" id="essentials">
+        <div class="row m-0 align-items-end">
+          <div class="col-lg-7">
+            <div class="video-card">
+              <img src="images/classimgvideo-1.png" alt="">
+              <span class="play-btn"><i class="bi bi-play-fill"></i></span>
+            </div>
           </div>
-          <a href="blog-detail.html" class="btn book-btn2">READ MORE</a>
-        </div>
 
-      </div>
-      <div class="col-md-4">
-        <div class="pricing-card">
-          <img src="images/plan-img2.png" alt="Session" class="pricing-img">
-
-          <div class="pricing-body text-center">
-            <h3 class="plan">Reformer</h3>
-            <h6><i class="bi bi-calendar"></i> 06/02/2026</h6>
-
-            <p class="desc">
-              Your unlimited pass to every jules On-Demand workout—Reformer, Chair,
-              Tower, Barrels, and more—whenever you're ready to move!
+          <div class="col-lg-5">
+            <p class="classes-text">
+              Whether you're craving a stretch session, an ab workout, a cardio burn,
+              or all three, there's a Jules class for you.
             </p>
-
-
+            <a href="#" class="btn book-btn">BOOK NOW</a>
           </div>
-          <a href="#" class="btn book-btn2">READ MORE</a>
         </div>
-
       </div>
-      <div class="col-md-4">
-        <div class="pricing-card">
-          <img src="images/plan-img3.png" alt="Session" class="pricing-img">
 
-          <div class="pricing-body text-center">
-            <h3 class="plan">No Equipment</h3>
-            <h6><i class="bi bi-calendar"></i> 06/02/2026</h6>
-            <p class="desc">
-              Your unlimited pass to every jules On-Demand workout—Reformer, Chair,
-              Tower, Barrels, and more—whenever you're ready to move!
-            </p>
+      <!-- COPY SAME STRUCTURE FOR OTHER TABS -->
+      <div class="tab-pane fade" id="body">Same content / change image</div>
+      <div class="tab-pane fade" id="goals">Same content / change image</div>
+      <div class="tab-pane fade" id="barre">Same content / change image</div>
+      <div class="tab-pane fade" id="hiit">Same content / change image</div>
+      <div class="tab-pane fade" id="technique">Same content / change image</div>
+      <div class="tab-pane fade" id="stretch">Same content / change image</div>
+      <div class="tab-pane fade" id="calm">Same content / change image</div>
+      <div class="tab-pane fade" id="postnatal">Same content / change image</div>
+      <div class="tab-pane fade" id="reformer">Same content / change image</div>
 
-
-          </div>
-          <a href="#" class="btn book-btn2">READ MORE</a>
-        </div>
-
-      </div>
     </div>
   </div>
 
-
+  
 
   <!-- footer -->
   <div include-html="footer.html" id="footer-file"></div>
@@ -142,6 +138,21 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/settings.js"></script>
   
+  <script>
+    let count = 0;
+    let target = 500;
+    let speed = 10;
+
+    let counter = setInterval(() => {
+      count++;
+      document.getElementById("studentCount").innerHTML = count;
+
+      if (count >= target) {
+        clearInterval(counter);
+      }
+    }, speed);
+  </script>
+
   <script>
     // loder-start
     window.addEventListener("load", function () {

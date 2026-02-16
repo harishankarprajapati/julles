@@ -56,117 +56,184 @@
   <!-- allherder -->
   <div class="container-fluid secallhedbg">
     <div class="container sechedtext">
-      <h2>Contact</h2>
+      <h2>Shop</h2>
     </div>
   </div>
 
-  <!-- book -->
-  <div class="container secbookbg">
-    <div class="row m-0 align-items-center">
 
-      <!-- LEFT FORM -->
-      <div class="col-md-6" id="bookappoment">
-        <div class="book-form-box">
-          <h2>Get in touch</h2>
+  
+  <!-- PRODUCTS TOP BAR -->
+  <div class="container-fluid products-topbar">
+    <div class="container">
+      <div class="products-topbar-inner">
 
-          <form>
-            <div class="row m-0 g-3">
-              <div class="col-md-6">
-                <input type="text" class="form-control" placeholder="Enter Full Name *" required>
+        <!-- FILTER BUTTON -->
+        <button class="filter-btn" id="openFilter">
+          <i class="bi bi-sliders"></i>
+          Filter
+        </button>
+
+        <!-- OVERLAY -->
+        <div class="filter-overlay" id="filterOverlay"></div>
+
+        <!-- FILTER SIDEBAR -->
+        <div class="filter-sidebar" id="filterSidebar">
+
+          <!-- HEADER -->
+          <div class="filter-header">
+            <h5>Filter</h5>
+            <span class="product-count">11 products</span>
+            <button class="close-filter" id="closeFilter">&times;</button>
+          </div>
+
+          <div class="filter-body">
+
+            <!-- Availability -->
+            <div class="filter-box active">
+              <div class="filter-title toggle-filter">
+                Availability <span class="icon">−</span>
               </div>
-              <div class="col-md-6">
-                <input type="email" class="form-control" placeholder="Enter Email Address *" required>
-              </div>
 
-              <div class="col-md-6">
-                <input type="text" class="form-control" placeholder="Enter Phone Number *" required>
-              </div>
-
-              <div class="col-md-6">
-                <select class="form-control" required>
-                  <option>Select a Program</option>
-                  <option>Karate</option>
-                  <option>Self Defense</option>
-                  <option>Fitness Training</option>
-                </select>
-              </div>
-
-              <div class="col-12">
-                <textarea class="form-control" rows="4" placeholder="Any Additional Message..."></textarea>
-              </div>
-
-              <div class="col-12">
-                <button class="btn-book">Submit <i class="bi bi-arrow-up-right"></i></button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-
-
-      <!-- RIGHT INFO EXACT DESIGN -->
-      <div class="col-md-6 ">
-        <div class="sectexttherbg book-info ">
-          <h5>Schedule A Appointment</h5>
-          <h2>Book your class
-            appointment now</h2>
-          <p>Take the first step toward building confidence, strength, and discipline.
-            Schedule your training session at a time that works best for you</p>
-
-        </div>
-
-        <div class="book-info">
-          <hr>
-          <div class="info-grid">
-
-            <div class="info-box">
-              <div class="icon"><i class="bi bi-telephone"></i></div>
-              <div>
-                <h5>Contact Us</h5>
-                <span>+91 123 456 789</span>
+              <div class="filter-content">
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
+                <span class="ms-2">In stock (11)</span>
               </div>
             </div>
 
-            <div class="info-box">
-              <div class="icon"><i class="bi bi-envelope"></i></div>
-              <div>
-                <h5>E-mail Address</h5>
-                <span>info@domainname.com</span>
+            <!-- Price -->
+            <div class="filter-box active">
+              <div class="filter-title toggle-filter">
+                Price <span class="icon">−</span>
+              </div>
+
+              <div class="filter-content">
+                <p>The highest price is $10,000.00</p>
+                <input type="range" min="0" max="10000">
+                <div class="price-inputs">
+                  <input type="number" value="0">
+                  <input type="number" value="10000">
+                </div>
               </div>
             </div>
 
-            <div class="info-box">
-              <div class="icon"><i class="bi bi-geo-alt"></i></div>
-              <div>
-                <h5>Location</h5>
-                <span>45 Martial Way Street, City</span>
-              </div>
-            </div>
 
-            <div class="info-box">
-              <div class="icon"><i class="bi bi-clock"></i></div>
-              <div>
-                <h5>Hours</h5>
-                <span>Mon-Sat: 8 AM - 9 PM</span><br>
-                <span>Sun: Closed</span>
+            <!-- Categories -->
+            <!-- <div class="filter-box">
+              <div class="filter-title toggle-filter">
+                Categories <span class="icon">+</span>
               </div>
-            </div>
+
+              <div class="filter-content">
+                <label><input type="checkbox"> Engine</label><br>
+                <label><input type="checkbox"> Suspension</label><br>
+                <label><input type="checkbox"> Electrical</label>
+              </div>
+            </div> -->
 
           </div>
+
+
+          <!-- FOOTER -->
+          <div class="filter-footer">
+            <button class="btn-clear">Remove all</button>
+            <button class="btn-apply">Apply</button>
+          </div>
+
         </div>
+
+
+        <div class="right-controls">
+
+          <div class="view-toggle">
+            <span class="active" data-view="grid">
+              <i class="bi bi-grid-3x3-gap-fill"></i>
+            </span>
+            <span data-view="list">
+              <i class="bi bi-list"></i>
+            </span>
+          </div>
+
+
+          <div class="product-count">
+            11 products
+          </div>
+
+          <div class="sort-wrap">
+            <span class="sort-label">Sort By</span>
+            <select>
+              <option>Best selling</option>
+              <option>Price, low to high</option>
+              <option>Price, high to low</option>
+            </select>
+          </div>
+
+        </div>
+
       </div>
-
     </div>
   </div>
 
-  <div class=".container-fluid px-4 ">
-    <div class="secmapbg ">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1685.079277607374!2d47.969744997747505!3d29.327657105156796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf9b1788420e3f%3A0x8c4dd18a682dc1d6!2sJulles!5e1!3m2!1sen!2sin!4v1771213425182!5m2!1sen!2sin"
-        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <!-- products add -->
+  <div class="container-fluid secproductsbg " id="productWrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-6" id="home-best-seller">
+          <div class="hbs-product">
+            <img src="images/shop-img1.png" alt="">
+            <h6>Water Bottle</h6>
+            <p>$500.00</p>
+
+            <div class="hbs-btns">
+              <button class="hbs-cart">Add to Cart</button>
+              <button class="hbs-view">Quick View</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6" id="home-best-seller">
+          <div class="hbs-product">
+            <img src="images/shop-img2.png" alt="">
+            <h6>White Glossy Mug</h6>
+            <p>$500.00</p>
+
+            <div class="hbs-btns">
+              <button class="hbs-cart">Add to Cart</button>
+              <button class="hbs-view">Quick View</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6" id="home-best-seller">
+          <div class="hbs-product">
+            <img src="images/shop-img3.png" alt="">
+            <h6>T-shirt</h6>
+            <p>$500.00</p>
+
+            <div class="hbs-btns">
+              <button class="hbs-cart">Add to Cart</button>
+              <button class="hbs-view">Quick View</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6" id="home-best-seller">
+          <div class="hbs-product">
+            <img src="images/shop-img4.png" alt="">
+            <h6>Tote bag</h6>
+            <p>$500.00</p>
+
+            <div class="hbs-btns">
+              <button class="hbs-cart">Add to Cart</button>
+              <button class="hbs-view">Quick View</button>
+            </div>
+          </div>
+        </div>
+   
+      </div>
     </div>
   </div>
+
+  
 
   <!-- footer -->
   <div include-html="footer.html" id="footer-file"></div>
@@ -183,7 +250,70 @@
   <script src="js/owl.carousel.min.js" type="text/javascript"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/settings.js"></script>
-  
+
+   <script>
+    // filter
+    const openBtn = document.getElementById('openFilter');
+    const closeBtn = document.getElementById('closeFilter');
+    const sidebar = document.getElementById('filterSidebar');
+    const overlay = document.getElementById('filterOverlay');
+
+    openBtn.onclick = () => {
+      sidebar.classList.add('active');
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    };
+
+    closeBtn.onclick = closeFilter;
+    overlay.onclick = closeFilter;
+
+    function closeFilter() {
+      sidebar.classList.remove('active');
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+document.querySelectorAll('.toggle-filter').forEach(title=>{
+  title.addEventListener('click',()=>{
+    const box = title.parentElement;
+    box.classList.toggle('active');
+
+    const icon = title.querySelector('.icon');
+    icon.textContent = box.classList.contains('active') ? '−' : '+';
+  });
+});
+
+
+   document.addEventListener('DOMContentLoaded', function () {
+
+  const viewBtns = document.querySelectorAll('.view-toggle span');
+  const productSection = document.querySelector('.secproductsbg');
+
+  if (!productSection || viewBtns.length === 0) return;
+
+  viewBtns.forEach(btn => {
+    btn.addEventListener('click', function () {
+
+      /* remove active from all */
+      viewBtns.forEach(i => i.classList.remove('active'));
+      this.classList.add('active');
+
+      const view = this.getAttribute('data-view');
+
+      /* reset first */
+      productSection.classList.remove('list-view');
+
+      /* apply view */
+      if (view === 'list') {
+        productSection.classList.add('list-view');
+      }
+
+    });
+  });
+
+});
+  </script>
+
   <script>
     let count = 0;
     let target = 500;

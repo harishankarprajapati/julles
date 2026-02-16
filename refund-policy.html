@@ -56,75 +56,77 @@
   <!-- allherder -->
   <div class="container-fluid secallhedbg">
     <div class="container sechedtext">
-      <h2>Blog</h2>
+      <h2>Refund Policy</h2>
     </div>
   </div>
 
-  <!-- Choose your perfect plan -->
-  <div class="container-fluid sechoosebg">
+<div class="container my-5 refund-policy">
+  <div class="row">
+    <div class="col-lg-12">
 
-    <div class="row m-0 pt-4">
-      <div class="col-md-4">
-        <div class="pricing-card">
-          <img src="images/plan-img1.png" alt="Session" class="pricing-img">
+      <p>
+        At <strong>Julles</strong>, we are committed to providing high-quality Pilates sessions and wellness services.
+        Please read our refund policy carefully before purchasing any membership, package, or class.
+      </p>
 
-          <div class="pricing-body text-center">
-            <h3 class="plan">All-Access</h3>
-            <h6><i class="bi bi-calendar"></i> 06/02/2026</h6>
+      <h5 class="mt-4">1. Membership & Package Payments</h5>
+      <p>
+        All membership fees and class package payments made at Julles are <strong>non-refundable</strong> and
+        <strong>non-transferable</strong>. Once a membership or package has been activated, no refunds will be issued.
+      </p>
 
-            <p class="desc">
-              Your unlimited pass to every jules On-Demand workout—Reformer, Chair,
-              Tower, Barrels, and more—whenever you're ready to move!
-            </p>
+      <h5 class="mt-4">2. Class Cancellations</h5>
+      <p>
+        Clients must cancel or reschedule a booked class at least <strong>12 hours</strong> in advance.
+        Failure to do so may result in the session being marked as used, with no refund or replacement.
+      </p>
 
+      <h5 class="mt-4">3. Missed Sessions</h5>
+      <p>
+        Any missed sessions due to late arrival, no-shows, or personal reasons will not be refunded or rescheduled.
+      </p>
 
+      <h5 class="mt-4">4. Studio Closures</h5>
+      <p>
+        In the rare event that Julles cancels a class due to unforeseen circumstances, the session will be
+        rescheduled or credited to your account. No cash refunds will be provided.
+      </p>
 
-          </div>
-          <a href="blog-detail.html" class="btn book-btn2">READ MORE</a>
-        </div>
+      <h5 class="mt-4">5. Medical Exceptions</h5>
+      <p>
+        Refunds or extensions may be considered only in exceptional medical cases, subject to valid medical
+        documentation and management approval.
+      </p>
 
-      </div>
-      <div class="col-md-4">
-        <div class="pricing-card">
-          <img src="images/plan-img2.png" alt="Session" class="pricing-img">
+      <h5 class="mt-4">6. Promotional Offers</h5>
+      <p>
+        Promotional, discounted, or trial packages are strictly <strong>non-refundable</strong> and cannot be
+        exchanged or extended.
+      </p>
 
-          <div class="pricing-body text-center">
-            <h3 class="plan">Reformer</h3>
-            <h6><i class="bi bi-calendar"></i> 06/02/2026</h6>
+      <h5 class="mt-4">7. Payment Disputes</h5>
+      <p>
+        Any payment disputes must be reported within <strong>7 days</strong> of the transaction date.
+        Disputes raised after this period may not be considered.
+      </p>
 
-            <p class="desc">
-              Your unlimited pass to every jules On-Demand workout—Reformer, Chair,
-              Tower, Barrels, and more—whenever you're ready to move!
-            </p>
+      <h5 class="mt-4">8. Policy Updates</h5>
+      <p>
+        Julles reserves the right to modify or update this Refund Policy at any time without prior notice.
+        Changes will be effective immediately upon posting on the website.
+      </p>
 
+      <h5 class="mt-4">9. Contact Us</h5>
+      <p>
+        For any questions regarding this Refund Policy, please contact us directly at our studio
+        or through our official communication channels.
+      </p>
 
-          </div>
-          <a href="#" class="btn book-btn2">READ MORE</a>
-        </div>
-
-      </div>
-      <div class="col-md-4">
-        <div class="pricing-card">
-          <img src="images/plan-img3.png" alt="Session" class="pricing-img">
-
-          <div class="pricing-body text-center">
-            <h3 class="plan">No Equipment</h3>
-            <h6><i class="bi bi-calendar"></i> 06/02/2026</h6>
-            <p class="desc">
-              Your unlimited pass to every jules On-Demand workout—Reformer, Chair,
-              Tower, Barrels, and more—whenever you're ready to move!
-            </p>
-
-
-          </div>
-          <a href="#" class="btn book-btn2">READ MORE</a>
-        </div>
-
-      </div>
     </div>
   </div>
+</div>
 
-
+  
 
   <!-- footer -->
   <div include-html="footer.html" id="footer-file"></div>
@@ -142,6 +144,21 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/settings.js"></script>
   
+  <script>
+    let count = 0;
+    let target = 500;
+    let speed = 10;
+
+    let counter = setInterval(() => {
+      count++;
+      document.getElementById("studentCount").innerHTML = count;
+
+      if (count >= target) {
+        clearInterval(counter);
+      }
+    }, speed);
+  </script>
+
   <script>
     // loder-start
     window.addEventListener("load", function () {

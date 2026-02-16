@@ -56,75 +56,80 @@
   <!-- allherder -->
   <div class="container-fluid secallhedbg">
     <div class="container sechedtext">
-      <h2>Blog</h2>
+      <h2>Register</h2>
     </div>
   </div>
 
-  <!-- Choose your perfect plan -->
-  <div class="container-fluid sechoosebg">
+  <div class="container my-5 ">
+<div class="row justify-content-center">
+  <div class="col-lg-6 col-md-8 col-sm-11">
 
-    <div class="row m-0 pt-4">
-      <div class="col-md-4">
-        <div class="pricing-card">
-          <img src="images/plan-img1.png" alt="Session" class="pricing-img">
+    <div class="auth-card">
+      <h3>Create Account</h3>
 
-          <div class="pricing-body text-center">
-            <h3 class="plan">All-Access</h3>
-            <h6><i class="bi bi-calendar"></i> 06/02/2026</h6>
+      <form>
 
-            <p class="desc">
-              Your unlimited pass to every jules On-Demand workout—Reformer, Chair,
-              Tower, Barrels, and more—whenever you're ready to move!
-            </p>
-
-
-
-          </div>
-          <a href="blog-detail.html" class="btn book-btn2">READ MORE</a>
+        <!-- Full Name -->
+        <div class="mb-3">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-control" placeholder="Enter your full name" required>
         </div>
 
-      </div>
-      <div class="col-md-4">
-        <div class="pricing-card">
-          <img src="images/plan-img2.png" alt="Session" class="pricing-img">
-
-          <div class="pricing-body text-center">
-            <h3 class="plan">Reformer</h3>
-            <h6><i class="bi bi-calendar"></i> 06/02/2026</h6>
-
-            <p class="desc">
-              Your unlimited pass to every jules On-Demand workout—Reformer, Chair,
-              Tower, Barrels, and more—whenever you're ready to move!
-            </p>
-
-
-          </div>
-          <a href="#" class="btn book-btn2">READ MORE</a>
+        <!-- Email -->
+        <div class="mb-3">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-control" placeholder="Enter your email" required>
         </div>
 
-      </div>
-      <div class="col-md-4">
-        <div class="pricing-card">
-          <img src="images/plan-img3.png" alt="Session" class="pricing-img">
-
-          <div class="pricing-body text-center">
-            <h3 class="plan">No Equipment</h3>
-            <h6><i class="bi bi-calendar"></i> 06/02/2026</h6>
-            <p class="desc">
-              Your unlimited pass to every jules On-Demand workout—Reformer, Chair,
-              Tower, Barrels, and more—whenever you're ready to move!
-            </p>
-
-
-          </div>
-          <a href="#" class="btn book-btn2">READ MORE</a>
+        <!-- Phone -->
+        <div class="mb-3">
+          <label class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" placeholder="Enter phone number" required>
         </div>
 
-      </div>
+        <!-- Password -->
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" placeholder="Create password" required>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="mb-3">
+          <label class="form-label">Confirm Password</label>
+          <input type="password" class="form-control" placeholder="Confirm password" required>
+        </div>
+
+        <!-- Terms -->
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="checkbox" id="terms" required>
+          <label class="form-check-label" for="terms">
+            I agree to the Terms & Conditions
+          </label>
+        </div>
+
+        <!-- Button -->
+        <div class="d-grid">
+          <button type="submit" class="btn btn-dark py-2">
+            Register Now
+          </button>
+        </div>
+
+        <!-- Login link -->
+        <p class="text-center mt-4 mb-0">
+          Already have an account?
+          <a href="login.html" class="fw-semibold text-decoration-none">Login</a>
+        </p>
+
+      </form>
     </div>
+
   </div>
+</div>
+
+</div>
 
 
+  
 
   <!-- footer -->
   <div include-html="footer.html" id="footer-file"></div>
@@ -142,6 +147,21 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/settings.js"></script>
   
+  <script>
+    let count = 0;
+    let target = 500;
+    let speed = 10;
+
+    let counter = setInterval(() => {
+      count++;
+      document.getElementById("studentCount").innerHTML = count;
+
+      if (count >= target) {
+        clearInterval(counter);
+      }
+    }, speed);
+  </script>
+
   <script>
     // loder-start
     window.addEventListener("load", function () {

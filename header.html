@@ -1,9 +1,7 @@
-
-
 <!-- HEADER -->
 <div class="container-fluid header-wrap">
   <!-- Scroll Progress Bar -->
-<div id="scrollProgress"></div>
+  <div id="scrollProgress"></div>
   <nav class="navbar navbar-expand-xl align-items-center header-nav">
     <!-- LOGO + NAME -->
     <a class="navbar-brand d-flex align-items-center secmobilelogo logo-text-wrap" href="index.html">
@@ -23,29 +21,82 @@
 
         <!-- LEFT MENU -->
         <ul class="navbar-nav left-menu">
-          <li class="nav-item"><a class="nav-link mentexces" href="#">Classes</a></li>
+          <li class="nav-item"><a class="nav-link mentexces" href="classes.html">Classes</a></li>
           <li class="nav-item"><a class="nav-link mentexces" href="about-us.html">About</a></li>
           <li class="nav-item"><a class="nav-link mentexces" href="blog.html">Blog</a></li>
           <li class="nav-item"><a class="nav-link mentexces" href="gallery.html">Gallery</a></li>
-     
 
-        <!-- CENTER LOGO -->
-        <a class="navbar-brand center-logo secdaklogo" href="index.html">
-          <img src="images/main-logo.png" alt="Logo">
-        </a>
 
-        <!-- RIGHT MENU -->
-  
+          <!-- CENTER LOGO -->
+          <a class="navbar-brand center-logo secdaklogo" href="index.html">
+            <img src="images/main-logo.png" alt="Logo">
+          </a>
+
+          <!-- RIGHT MENU -->
+
           <li class="nav-item"><a class="nav-link mentexces" href="pricing.html">Pricing</a></li>
           <li class="nav-item"><a class="nav-link mentexces" href="contact.html">Contact Us</a></li>
+             <a href="#" class="header-btn secdasjtoh" data-bs-toggle="modal" data-bs-target="#quoteModal">
+            Request a Quote
+          </a>
         </ul>
 
         <!-- ICONS + BUTTON -->
         <div class="nav-icons-btn">
-          <a href="#" class="nav-icon"><i class="bi bi-person"></i></a>
-          <a href="#" class="nav-icon"><i class="bi bi-bag"></i></a>
+          <a href="login.html" class="nav-icon sechidmob"><i class="bi bi-person"></i></a>
+          <a href="cart.html" class="nav-icon sechidmob">
+            <i class="bi bi-bag"></i>
+            <span class="cart-count">0</span>
+          </a>
 
-          <a href="#" class="header-btn">Request a Quote</a>
+
+          <a href="#" class="header-btn secmobilehibg" data-bs-toggle="modal" data-bs-target="#quoteModal">
+            Request a Quote
+          </a>
+          <!-- Request a Quote Modal -->
+          <div class="modal fade" id="quoteModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content rounded-3">
+
+                <div class="modal-header">
+                  <h5 class="modal-title">Request a Quote</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                  <form>
+
+                    <div class="mb-3">
+                      <label class="form-label">Full Name</label>
+                      <input type="text" class="form-control" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label">Email Address</label>
+                      <input type="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label">Phone Number</label>
+                      <input type="tel" class="form-control" placeholder="Enter your phone" required>
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label">Message</label>
+                      <textarea class="form-control" rows="3" placeholder="Tell us your requirement"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-dark w-100">
+                      Submit Request
+                    </button>
+
+                  </form>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -55,5 +106,16 @@
 </div>
 
 
+<!-- MOBILE FIXED BOTTOM BAR (OUTSIDE OFFCANVAS) -->
+<div class="mobile-bottom-bar d-xl-none">
+  <a href="login.html" class="nav-icon">
+    <i class="bi bi-person"></i>
+  </a>
 
+  <a href="cart.html" class="nav-icon">
+    <i class="bi bi-bag"></i>
+    <span class="cart-count">0</span>
+  </a>
 
+  
+</div>

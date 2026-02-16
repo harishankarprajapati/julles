@@ -56,75 +56,75 @@
   <!-- allherder -->
   <div class="container-fluid secallhedbg">
     <div class="container sechedtext">
-      <h2>Blog</h2>
+      <h2>Cart</h2>
     </div>
   </div>
 
-  <!-- Choose your perfect plan -->
-  <div class="container-fluid sechoosebg">
-
-    <div class="row m-0 pt-4">
-      <div class="col-md-4">
-        <div class="pricing-card">
-          <img src="images/plan-img1.png" alt="Session" class="pricing-img">
-
-          <div class="pricing-body text-center">
-            <h3 class="plan">All-Access</h3>
-            <h6><i class="bi bi-calendar"></i> 06/02/2026</h6>
-
-            <p class="desc">
-              Your unlimited pass to every jules On-Demand workout—Reformer, Chair,
-              Tower, Barrels, and more—whenever you're ready to move!
-            </p>
+  <!-- EMPTY CART -->
+<div class="empty-cart d-none">
+  <div class="empty-cart-box text-center">
+    <img src="images/empty-cart.png" alt="Empty Cart">
+    <h3>Your cart is empty</h3>
+    <p>Looks like you haven’t added anything to your cart yet.</p>
+    <a href="shop.html" class="btn btn-dark">Continue Shopping</a>
+  </div>
+</div>
 
 
+<div class="container my-5 ">
+<div class="cart-wrapper">
 
-          </div>
-          <a href="blog-detail.html" class="btn book-btn2">READ MORE</a>
+  <!-- Cart Items -->
+  <div class="cart-items">
+
+    <div class="cart-item">
+      <img src="images/plan-img1.png" alt="Product">
+      <div class="item-details">
+        <h5>Hair Mask</h5>
+        <p class="price">₹899</p>
+
+        <div class="qty-box">
+          <button>-</button>
+          <input type="text" value="1">
+          <button>+</button>
         </div>
-
       </div>
-      <div class="col-md-4">
-        <div class="pricing-card">
-          <img src="images/plan-img2.png" alt="Session" class="pricing-img">
-
-          <div class="pricing-body text-center">
-            <h3 class="plan">Reformer</h3>
-            <h6><i class="bi bi-calendar"></i> 06/02/2026</h6>
-
-            <p class="desc">
-              Your unlimited pass to every jules On-Demand workout—Reformer, Chair,
-              Tower, Barrels, and more—whenever you're ready to move!
-            </p>
-
-
-          </div>
-          <a href="#" class="btn book-btn2">READ MORE</a>
-        </div>
-
-      </div>
-      <div class="col-md-4">
-        <div class="pricing-card">
-          <img src="images/plan-img3.png" alt="Session" class="pricing-img">
-
-          <div class="pricing-body text-center">
-            <h3 class="plan">No Equipment</h3>
-            <h6><i class="bi bi-calendar"></i> 06/02/2026</h6>
-            <p class="desc">
-              Your unlimited pass to every jules On-Demand workout—Reformer, Chair,
-              Tower, Barrels, and more—whenever you're ready to move!
-            </p>
-
-
-          </div>
-          <a href="#" class="btn book-btn2">READ MORE</a>
-        </div>
-
-      </div>
+      <i class="bi bi-trash remove-item"></i>
     </div>
+
+   
+
   </div>
 
+  <!-- Cart Summary -->
+  <div class="cart-summary">
+    <h4>Order Summary</h4>
 
+    <div class="summary-row">
+      <span>Subtotal</span>
+      <span>₹899</span>
+    </div>
+
+    <div class="summary-row">
+      <span>Shipping</span>
+      <span>₹50</span>
+    </div>
+
+    <hr>
+
+    <div class="summary-row total">
+      <span>Total</span>
+      <span>₹949</span>
+    </div>
+
+    <button class="checkout-btn">Proceed to Checkout</button>
+  </div>
+
+</div>
+
+</div>
+
+  
 
   <!-- footer -->
   <div include-html="footer.html" id="footer-file"></div>
@@ -143,6 +143,21 @@
   <script src="js/settings.js"></script>
   
   <script>
+    let count = 0;
+    let target = 500;
+    let speed = 10;
+
+    let counter = setInterval(() => {
+      count++;
+      document.getElementById("studentCount").innerHTML = count;
+
+      if (count >= target) {
+        clearInterval(counter);
+      }
+    }, speed);
+  </script>
+
+  <script>
     // loder-start
     window.addEventListener("load", function () {
       document.getElementById("pageloader").style.display = "none";
@@ -150,6 +165,17 @@
     // loder-end
 
   </script>
+<script>
+  const hasCartItems = false; // true / false
+
+  if (hasCartItems) {
+    document.querySelector('.cart-wrapper').classList.remove('d-none');
+    document.querySelector('.empty-cart').classList.add('d-none');
+  } else {
+    document.querySelector('.cart-wrapper').classList.add('d-none');
+    document.querySelector('.empty-cart').classList.remove('d-none');
+  }
+</script>
 
 
 
