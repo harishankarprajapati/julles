@@ -236,6 +236,10 @@
   .secdasjtoh{
   display: block;
 }
+.sechedtext h2 {
+    font-family: 'Berfilem';
+    font-size: 40px;
+}
 }
 
 

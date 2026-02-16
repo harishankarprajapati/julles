@@ -56,71 +56,82 @@
   <!-- allherder -->
   <div class="container-fluid secallhedbg">
     <div class="container sechedtext">
-      <h2>Disclaimer</h2>
+      <h2>product-details</h2>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <div class="row m-0  align-items-start">
+
+      <!-- LEFT IMAGE GALLERY -->
+      <div class="col-lg-6">
+        <div class="d-flex gap-3">
+          <!-- thumbnails -->
+          <div class="d-flex flex-column gap-2 product-thumbs">
+            <img src="images/shop-img1.png" class="thumb active">
+            <img src="images/shop-img2.png" class="thumb">
+            <img src="images/shop-img3.png" class="thumb">
+            <img src="images/shop-img4.png" class="thumb">
+          </div>
+
+          <!-- main image -->
+          <div class="product-main-img zoom-wrapper">
+            <img id="mainImage" src="images/shop-img1.png" class="zoom-img">
+            <div class="zoom-lens"></div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <!-- RIGHT PRODUCT DETAILS -->
+      <div class="col-lg-6">
+        <h2 class="product-title">Water Bottle</h2>
+
+        <h4 class="price">$500</h4>
+
+        <p class="description">
+          Stay hydrated in style with this flip straw water bottle, made from 50% recycled plastic.
+          Leak-proof, durable and perfect for gym, work or travel.
+        </p>
+
+        <ul class="product-points">
+          <li>BPA-free Tritan® Renew</li>
+          <li>25 oz (739 ml)</li>
+          <li>Stain & odor resistant</li>
+          <li>Leak-proof bite valve</li>
+          <li>Carry handle</li>
+        </ul>
+
+        <!-- COLOR -->
+        <div class="mb-3">
+          <label class="fw-semibold mb-2">COLOR</label>
+          <select class="form-select product-select">
+            <option>Oxford Blue</option>
+            <option>Black</option>
+            <option>Pink</option>
+          </select>
+        </div>
+
+        <!-- QTY + CART -->
+        <div class="d-flex align-items-center gap-3">
+          <div class="qty-box">
+            <button>-</button>
+            <input type="text" value="1">
+            <button>+</button>
+          </div>
+
+          <button class="btn add-to-cart">
+            ADD TO CART
+          </button>
+        </div>
+      </div>
+
     </div>
   </div>
 
 
-  <div class="container my-5 refund-policy">
-  <div class="row m-0">
-    <div class="col-lg-12">
 
-      <p>
-        The information provided by <strong>Julles</strong> on this website is for general
-        informational purposes only. All content is provided in good faith; however,
-        we make no representation or warranty of any kind regarding accuracy,
-        adequacy, validity, reliability, or completeness of any information.
-      </p>
-
-      <h5>1. Professional Disclaimer</h5>
-      <p>
-        The services and information offered by Julles do not constitute medical,
-        health, or professional advice. Always consult with a qualified healthcare
-        professional before starting any fitness or wellness program.
-      </p>
-
-      <h5>2. Health & Fitness Disclaimer</h5>
-      <p>
-        Participation in Pilates or physical activities involves inherent risks.
-        By using our services, you acknowledge and accept full responsibility for
-        your health, safety, and physical condition.
-      </p>
-
-      <h5>3. External Links Disclaimer</h5>
-      <p>
-        Our website may contain links to external or third-party websites.
-        Julles does not guarantee, approve, or assume responsibility for the accuracy
-        or reliability of any information offered by third-party websites.
-      </p>
-
-      <h5>4. Limitation of Liability</h5>
-      <p>
-        Under no circumstance shall Julles be liable for any loss or damage incurred
-        as a result of the use of our website or services.
-      </p>
-
-      <h5>5. Errors & Omissions</h5>
-      <p>
-        While we strive to keep the information on this website accurate and up to date,
-        Julles is not responsible for any errors or omissions or for the results obtained
-        from the use of this information.
-      </p>
-
-      <h5>6. Consent</h5>
-      <p>
-        By using our website or services, you hereby consent to this Disclaimer
-        and agree to its terms.
-      </p>
-
-      <h5>7. Updates</h5>
-      <p>
-        Julles reserves the right to update, amend, or change this Disclaimer at any time
-        without prior notice. Any changes will be effective immediately upon posting.
-      </p>
-
-    </div>
-  </div>
-</div>
 
 
   <!-- footer -->
@@ -138,7 +149,59 @@
   <script src="js/owl.carousel.min.js" type="text/javascript"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/settings.js"></script>
-  
+<script>
+const img = document.getElementById("mainImage");
+const lens = document.querySelector(".zoom-lens");
+
+lens.style.backgroundImage = `url('${img.src}')`;
+
+img.addEventListener("mousemove", moveLens);
+lens.addEventListener("mousemove", moveLens);
+img.addEventListener("mouseenter", () => lens.style.display = "block");
+img.addEventListener("mouseleave", () => lens.style.display = "none");
+
+function moveLens(e) {
+  const rect = img.getBoundingClientRect();
+  let x = e.clientX - rect.left - lens.offsetWidth / 2;
+  let y = e.clientY - rect.top - lens.offsetHeight / 2;
+
+  if (x < 0) x = 0;
+  if (y < 0) y = 0;
+  if (x > img.width - lens.offsetWidth) x = img.width - lens.offsetWidth;
+  if (y > img.height - lens.offsetHeight) y = img.height - lens.offsetHeight;
+
+  lens.style.left = x + "px";
+  lens.style.top = y + "px";
+
+  const fx = x / img.width * 100;
+  const fy = y / img.height * 100;
+
+  lens.style.backgroundPosition = `${fx}% ${fy}%`;
+}
+
+document.querySelectorAll('.thumb').forEach(imgThumb => {
+  imgThumb.addEventListener('click', () => {
+    mainImage.src = imgThumb.src;
+    lens.style.backgroundImage = `url('${imgThumb.src}')`;
+    document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+    imgThumb.classList.add('active');
+  });
+});
+
+</script>
+
+
+  <script>
+    document.querySelectorAll('.thumb').forEach(img => {
+      img.addEventListener('click', () => {
+        document.getElementById('mainImage').src = img.src;
+        document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+        img.classList.add('active');
+      });
+    });
+  </script>
+
+
   <script>
     let count = 0;
     let target = 500;

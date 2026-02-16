@@ -2160,3 +2160,154 @@ body.loaded #pageloader {
 .secdasjtoh{
   display: none;
 }
+.product-thumbs img {
+  width: 55px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 2px solid transparent;
+}
+
+.product-thumbs img.active {
+  border-color: #ff8a00;
+}
+
+.product-main-img {
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.product-title {
+  font-weight: 600;
+}
+
+.price {
+  color: #000;
+  margin-top: 10px;
+}
+
+.installment {
+  font-size: 14px;
+  color: #666;
+}
+
+.product-points {
+  padding-left: 18px;
+}
+
+.product-points li {
+  margin-bottom: 6px;
+}
+
+.product-select {
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.qty-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.qty-box button {
+  border: none;
+  background: none;
+  padding: 10px 15px;
+  font-size: 18px;
+}
+
+.qty-box input {
+  width: 40px;
+  text-align: center;
+  border: none;
+}
+
+.add-to-cart {
+  background: #226349;
+  color: #fff;
+  border-radius: 30px;
+  padding: 12px 35px;
+  font-weight: 600;
+}
+
+.add-to-cart:hover {
+  background: #c49b63;
+  color: #fff;
+}
+.zoom-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.zoom-img {
+  width: 100%;
+  display: block;
+}
+
+.zoom-lens {
+  position: absolute;
+  border: 2px solid #000;
+  width: 250px;
+  height: 250px;
+  display: none;
+  background-repeat: no-repeat;
+  background-size: 200%;
+  pointer-events: none;
+}
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 991px) {
+
+  /* gallery column me aa jaaye */
+  .col-lg-6 > .d-flex {
+    flex-direction: column;
+  }
+
+  /* thumbnails neeche row me */
+  .product-thumbs {
+    flex-direction: row !important;
+    justify-content: center;
+    order: 2;
+    margin-top: 15px;
+  }
+
+  .product-main-img {
+    order: 1;
+  }
+
+  .product-thumbs img {
+    width: 60px;
+    height: 75px;
+  }
+}
+/* ===== TABLET ===== */
+@media (max-width: 991px) {
+  .refund-policy {
+    padding: 0 10px;
+    font-size: 15px;
+  }
+
+  .refund-policy h5 {
+    font-size: 17px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 576px) {
+  .refund-policy {
+    font-size: 14.5px;
+    line-height: 1.8;
+  }
+
+  .refund-policy h5 {
+    font-size: 16px;
+  }
+
+  .refund-policy p {
+    text-align: justify;
+  }
+}
